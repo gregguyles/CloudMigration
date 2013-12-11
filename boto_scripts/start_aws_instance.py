@@ -33,7 +33,7 @@ def run_instances(region_str_id, num_instances):
 	running_instances = connection_reservation.instances
 
 	# it will return a list of the running instances
-	running_instance_ids = [i.id for i in running_instances]
+	running_instance_ids = [i.id.encode('ascii') for i in running_instances]
 	return running_instance_ids
 
 if __name__ == '__main__':

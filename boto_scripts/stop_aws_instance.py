@@ -22,7 +22,7 @@ def shutdown_instances(region_str_id, instances):
 	# terminate given instances
 	# it will return a list of the terminated instances
 	terminated_instances = connection.terminate_instances(instances) 
-	terminated_instance_ids = [i.id for i in terminated_instances]
+	terminated_instance_ids = [i.id.encode('ascii') for i in terminated_instances]
 	return terminated_instance_ids
 
 if __name__ == '__main__':
