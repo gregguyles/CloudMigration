@@ -16,8 +16,11 @@ class Region:
 
 class Locations:
 	def __init__(self):
-		region_0 = Region('us-east-1', 'AKIAIU5VIKCKPL6JHXAQ','ogBb4N/DLQ5hIzCiA799lKO66JSAPEEVEFgZ3e2O','marvel-east',['boto'])
-		self.regions = [region_0]
+		virginia = Region('us-east-1', '', '','cm-key.pub',['migrate'])
+		sao_paulo = Region('sa-east-1', '', '', 'cm-key.pub', ['migrate'])
+		california = Region('us-west-1', '', '', 'cm-key.pub', ['migrate'])
+		ireland = Region('eu-west-1', '', '', 'cm-key.pub', ['migrate'])
+		self.regions = [sao_paulo, california, virginia, ireland]
 
 	def return_region(self, index):
 		return self.regions[index]
