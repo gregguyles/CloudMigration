@@ -1,3 +1,0 @@
-Cloud Migration project for CSCI-5673 Distributed Systems
-
-src - contains java program CloudMigration, runs SysBench and saves output in csv format
